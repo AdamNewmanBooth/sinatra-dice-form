@@ -7,5 +7,7 @@ get("/") do
 end
 
 get("/process_roll") do
-    erb(:results)
+   @num_dice=params.fetch("dice").to_i
+  @numsides=params.fetch("sides").to_i
+  erb(:results)
 end
